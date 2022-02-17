@@ -1,1 +1,7 @@
 Hi!
+
+
+    match /clubRegistrations/{clubRegistrationId}{
+  		allow read: if isRoleAdmin() || isRoleCSM();
+      allow write: if isRoleAdmin() || isRoleCSM();
+    }
